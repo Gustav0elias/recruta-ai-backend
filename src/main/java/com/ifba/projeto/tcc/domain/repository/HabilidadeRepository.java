@@ -10,4 +10,5 @@ import java.util.UUID;
 @Repository
 public interface HabilidadeRepository extends JpaRepository<Habilidade, Long> {
     Optional<Habilidade> findByUuid(UUID uuid);
-}
+
+    Optional<Habilidade> findByNome(String nome);}

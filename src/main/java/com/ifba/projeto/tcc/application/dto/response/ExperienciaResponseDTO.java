@@ -8,12 +8,10 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 public record ExperienciaResponseDTO(
-        UUID uuid,
         String empresa,
         String cargo,
         String descricao,
-        LocalDate dataInicio,
-        LocalDate dataFim,
-        CandidatoResumoResponseDTO candidato
+        String dataInicio,
+        String dataFim
 ) {
 }

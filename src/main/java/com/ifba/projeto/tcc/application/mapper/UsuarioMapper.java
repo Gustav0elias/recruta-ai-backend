@@ -5,9 +5,10 @@ import com.ifba.projeto.tcc.application.dto.response.UsuarioRegistroResponseDTO;
 import com.ifba.projeto.tcc.application.dto.response.UsuarioResponseDTO;
 import com.ifba.projeto.tcc.domain.entity.Usuario;
 import org.mapstruct.Mapper;
+import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface UsuarioMapper {
     UsuarioMapper INSTANCE = Mappers.getMapper(UsuarioMapper.class);
 

@@ -8,16 +8,13 @@ import com.ifba.projeto.tcc.domain.entity.Vaga;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
+import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface VagaMapper {
     VagaMapper INSTANCE = Mappers.getMapper(VagaMapper.class);
-    @Mapping(target = "id", ignore = true)
-    @Mapping(target = "uuid", ignore = true)
-    @Mapping(target = "usuario", ignore = true)
-    @Mapping(target = "habilidades", ignore = true)
-    @Mapping(target = "criadoEm", ignore = true)
+
     Vaga toModel (VagaRequestDTO dto);
     VagaResponseDTO toDto (Vaga vaga);
 
