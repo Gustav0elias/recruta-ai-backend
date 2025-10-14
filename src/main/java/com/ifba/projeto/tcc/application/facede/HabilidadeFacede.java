@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class HabilidadeServiceFacede {
+public class HabilidadeFacede {
     private final CriarHabilidadeUseCase criarHabilidadeUseCase;
     private final ListarHabilidadesUseCase listarHabilidadesUseCase;
     private final EditarHabilidadeUseCase editarHabilidadeUseCase;

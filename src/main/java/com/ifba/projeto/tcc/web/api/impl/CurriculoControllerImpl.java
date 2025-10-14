@@ -15,9 +15,9 @@ public class CurriculoControllerImpl implements CurriculoController {
     private final CurriculoFacede curriculoFacede;
 
     @Override
-    public ResponseEntity<CurriculoResponseDTO> salvarCurriculo(MultipartFile arquivo) {
+    public ResponseEntity<CurriculoResponseDTO> salvarCurriculo(MultipartFile arquivo, Long vagaId) {
         CurriculoRequestDTO dto = new CurriculoRequestDTO(arquivo);
-        CurriculoResponseDTO response = curriculoFacede.criarCurriculo(dto);
+        CurriculoResponseDTO response = curriculoFacede.criarCurriculo(dto, vagaId);
         return ResponseEntity.ok(response);
     }
 }

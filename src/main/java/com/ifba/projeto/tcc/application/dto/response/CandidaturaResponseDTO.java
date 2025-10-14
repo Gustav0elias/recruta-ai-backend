@@ -4,9 +4,8 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 public record CandidaturaResponseDTO(
-        UUID uuid,
+        UUID uuidCandidatura,
         Long score,
-        VagaResumoResponseDTO vaga,
-        CurriculoResumoResponseDTO curriculo
+        CandidatoResumoResponseDTO candidato
 ) {
 }

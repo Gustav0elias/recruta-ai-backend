@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -22,7 +23,7 @@ public class CriarExperienciaUseCaseImpl implements CriarExperienciaUseCase {
             experiencia.setEmpresa(experienciaResponseDTO.empresa());
             experiencia.setDescricao(experienciaResponseDTO.descricao());
             experiencia.setDataInicio(LocalDate.parse(experienciaResponseDTO.dataInicio()));
-            experiencia.setDataFim(LocalDate.parse(experienciaResponseDTO.dataFim()));
+            experiencia.setDataFim(Optional.ofNullable(experienciaResponseDTO.dataFim()).map(LocalDate::parse) .orElse(null));
             experiencia.setCandidato(candidato);
             return experiencia;
         }).collect(Collectors.toList());

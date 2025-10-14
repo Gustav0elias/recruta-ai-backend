@@ -19,11 +19,11 @@ public class Experiencia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private UUID uuid;
-    @Column(name = "empresa", nullable = false, length = 50)
+    @Column(name = "empresa", nullable = false, length = 150)
     private String empresa;
-    @Column(name = "cargo", nullable = false, length = 50)
+    @Column(name = "cargo", nullable = false, length = 350)
     private String cargo;
-    @Column(name = "descricao", length = 100)
+    @Column(name = "descricao", length = 1000)
     private String descricao;
     @Column(name = "data_inicio")
     private LocalDate dataInicio;

@@ -5,6 +5,7 @@ import java.util.UUID;
 public record CandidatoResumoResponseDTO (
         UUID uuid,
         String nome,
-        String email
+        String email,
+        String telefone
 ) {
 }

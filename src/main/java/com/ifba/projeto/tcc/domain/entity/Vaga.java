@@ -31,10 +31,17 @@ public class Vaga {
     @ManyToOne()
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
-    @OneToMany(mappedBy = "vaga")
+    @OneToMany(mappedBy = "vaga", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Candidatura> candidaturas = new ArrayList<>();
+
     @ManyToMany()
     @JoinTable(name = "vaga_habilidade", joinColumns = @JoinColumn(name = "id_vaga"), inverseJoinColumns = @JoinColumn(name = "id_habilidade"))
     private Set<Habilidade> habilidades = new HashSet<>();
-
+    @PrePersist
+    public void prePersist() {
+        this.criadoEm = LocalDateTime.now();
+        if (uuid == null) {
+            uuid = UUID.randomUUID();
+        }
+    }
 }

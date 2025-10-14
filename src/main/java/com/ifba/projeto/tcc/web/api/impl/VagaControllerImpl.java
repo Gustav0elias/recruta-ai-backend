@@ -3,7 +3,7 @@ package com.ifba.projeto.tcc.web.api.impl;
 import com.ifba.projeto.tcc.application.dto.request.AdicionarHabilidadesRequestDTO;
 import com.ifba.projeto.tcc.application.dto.request.VagaRequestDTO;
 import com.ifba.projeto.tcc.application.dto.response.VagaResponseDTO;
-import com.ifba.projeto.tcc.application.facede.VagaServiceFacede;
+import com.ifba.projeto.tcc.application.facede.VagaFacede;
 import com.ifba.projeto.tcc.web.api.VagaController;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class VagaControllerImpl implements VagaController {
 
-    private final VagaServiceFacede vagaServiceFacede;
+    private final VagaFacede vagaServiceFacede;
 
     @Override
     public ResponseEntity<VagaResponseDTO> criarVaga(@Valid VagaRequestDTO dto) {

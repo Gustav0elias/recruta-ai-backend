@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class UsuarioServiceFacede {
+public class UsuarioFacede {
     private final CriarUsuarioUseCase criarUsuarioUseCase;
     private final LoginUseCase loginUseCase;
     public UsuarioRegistroResponseDTO criarUsuario(UsuarioRequestDTO dto) {

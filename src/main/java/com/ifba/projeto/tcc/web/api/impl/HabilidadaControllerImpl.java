@@ -2,7 +2,7 @@ package com.ifba.projeto.tcc.web.api.impl;
 
 import com.ifba.projeto.tcc.application.dto.request.HabilidadeRequestDTO;
 import com.ifba.projeto.tcc.application.dto.response.HabilidadeResponseDTO;
-import com.ifba.projeto.tcc.application.facede.HabilidadeServiceFacede;
+import com.ifba.projeto.tcc.application.facede.HabilidadeFacede;
 import com.ifba.projeto.tcc.web.api.HabilidadeController;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 public class HabilidadaControllerImpl implements HabilidadeController {
-    private final HabilidadeServiceFacede habilidadeServiceFacede;
+    private final HabilidadeFacede habilidadeServiceFacede;
     @Override
     public ResponseEntity<HabilidadeResponseDTO> criarHabilidade(HabilidadeRequestDTO dto) {
         HabilidadeResponseDTO response =habilidadeServiceFacede.criarHabilidade(dto);

@@ -1,0 +1,48 @@
+package com.ifba.projeto.tcc.application.usecase.vaga.impl;
+
+import com.ifba.projeto.tcc.Infra.service.DefinirScoreAiService;
+import com.ifba.projeto.tcc.application.dto.response.ScoreResponseDTO;
+import com.ifba.projeto.tcc.application.usecase.Analise.CriarAnaliseUseCase;
+import com.ifba.projeto.tcc.application.usecase.experiencia.CriarExperienciaUseCase;
+import com.ifba.projeto.tcc.application.usecase.vaga.VincularCurriculoAVagaUseCase;
+import com.ifba.projeto.tcc.domain.entity.*;
+import com.ifba.projeto.tcc.domain.repository.VagaRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+@RequiredArgsConstructor
+@Service
+public class VincularCurriculoAVagaUseCaseImpl implements VincularCurriculoAVagaUseCase {
+
+    private final VagaRepository vagaRepository;
+    private final DefinirScoreAiService definirScoreAiService;
+    private final CriarAnaliseUseCase criarAnaliseUseCase;
+    @Override
+    public void executar(Curriculo curriculo, Long idVaga) {
+        if (idVaga != null) {
+            Vaga vaga = vagaRepository.findById(idVaga)
+                    .orElseThrow(() -> new RuntimeException("Vaga não encontrada"));
+
+            ScoreResponseDTO score = definirScoreAiService.calcularScore(curriculo.getCandidato(), vaga);
+
+            Candidatura candidatura = new Candidatura();
+            candidatura.setUuid(UUID.randomUUID());
+            candidatura.setCurriculo(curriculo);
+            candidatura.setScore(score.score());
+            candidatura.setVaga(vaga);
+            candidatura.setDataCadastro(LocalDateTime.now());
+
+            Analise analiseespecifica = criarAnaliseUseCase.executar(score, curriculo, TipoAnalise.ESPECIFICA_CURRICULO);
+            Analise analiseGeral = criarAnaliseUseCase.executar(score, curriculo, TipoAnalise.GERAL);
+
+            curriculo.getAnalises().add(analiseespecifica);
+            curriculo.getAnalises().add(analiseGeral);
+            vaga.getCandidaturas().add(candidatura);
+
+            vagaRepository.save(vaga);
+        }
+    }
+}

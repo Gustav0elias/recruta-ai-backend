@@ -5,9 +5,9 @@ import java.util.UUID;
 
 public record CurriculoResponseDTO(
         Long id,
-        UUID uuid,
-        String caminhoArquivo,
-        Boolean ativo,
-        LocalDateTime criadoEm,
-        UUID candidatoUuid
+         UUID uuid,
+         String caminhoArquivo,
+         boolean ativo,
+         LocalDateTime criadoEm,
+         CandidatoCurriculoResponseDTO candidato
 ) {}

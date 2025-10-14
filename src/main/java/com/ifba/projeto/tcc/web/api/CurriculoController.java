@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 public interface CurriculoController {
     @PostMapping("/salvar")
-    public ResponseEntity<CurriculoResponseDTO> salvarCurriculo(
-            @RequestParam("arquivo") MultipartFile arquivo);
+    ResponseEntity<CurriculoResponseDTO> salvarCurriculo(
+            @RequestParam("arquivo") MultipartFile arquivo,
+            @RequestParam(value = "idVaga", required = false) Long idVaga);
 }

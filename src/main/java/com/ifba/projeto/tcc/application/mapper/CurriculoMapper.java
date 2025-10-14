@@ -15,7 +15,6 @@ public interface CurriculoMapper {
     @Mapping(target = "caminhoArquivo", source = "caminhoArquivo")
     @Mapping(target = "ativo", source = "ativo")
     @Mapping(target = "criadoEm", source = "criadoEm")
-    @Mapping(target = "candidatoUuid", source = "candidato.uuid")
     CurriculoResponseDTO toDto(Curriculo entity);
 
     Curriculo toEntity(CurriculoRequestDTO dto);

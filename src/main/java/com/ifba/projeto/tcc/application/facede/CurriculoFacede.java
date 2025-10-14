@@ -10,7 +10,8 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class CurriculoFacede {
     private final CriarCurriculoUseCase criarCurriculoUseCase;
-    public CurriculoResponseDTO criarCurriculo(CurriculoRequestDTO dto) {
-        return criarCurriculoUseCase.executar(dto);
+    public CurriculoResponseDTO criarCurriculo(CurriculoRequestDTO dto, Long vagaId) {
+        return criarCurriculoUseCase.executar(dto, vagaId);
     }
+
 }

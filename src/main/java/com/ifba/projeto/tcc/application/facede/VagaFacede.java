@@ -1,12 +1,9 @@
 package com.ifba.projeto.tcc.application.facede;
 
 import com.ifba.projeto.tcc.application.dto.request.AdicionarHabilidadesRequestDTO;
-import com.ifba.projeto.tcc.application.dto.request.HabilidadeRequestDTO;
 import com.ifba.projeto.tcc.application.dto.request.VagaRequestDTO;
-import com.ifba.projeto.tcc.application.dto.response.HabilidadeResponseDTO;
 import com.ifba.projeto.tcc.application.dto.response.VagaResponseDTO;
 import com.ifba.projeto.tcc.application.usecase.vaga.*;
-import com.ifba.projeto.tcc.domain.entity.Vaga;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class VagaServiceFacede {
+public class VagaFacede {
     private final CriarVagaUseCase criarVagaUseCase;
     private final EditarVagaUseCase editarVagaUseCase;
     private final ListarVagasUseCase listarVagasUseCase;
