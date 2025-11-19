@@ -5,11 +5,12 @@ import com.ifba.projeto.tcc.Infra.service.PdfExtractionService;
 import com.ifba.projeto.tcc.application.dto.response.CurriculoExtraidoResponseDTO;
 import com.ifba.projeto.tcc.application.usecase.curriculo.ExtrairDadosCurriculoUseCase;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
 
-
+@Slf4j
 @RequiredArgsConstructor
 @Service
 public class ExtrairDadosCurriculoUseCaseImpl implements ExtrairDadosCurriculoUseCase {
@@ -19,8 +20,10 @@ public class ExtrairDadosCurriculoUseCaseImpl implements ExtrairDadosCurriculoUs
 
     @Override
     public CurriculoExtraidoResponseDTO executar(File arquivoPdf) {
+        log.info("Extraindo dados do currículo: {}", arquivoPdf.getName());
         String textoExtraido = pdfExtractionService.extractText(arquivoPdf);
         textoExtraido = limparTexto(textoExtraido);
+        log.debug("Texto extraído e limpo: {}", textoExtraido);
         return parserService.extrairInformacoes(textoExtraido);
     }
 

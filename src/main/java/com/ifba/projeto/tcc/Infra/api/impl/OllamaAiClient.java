@@ -3,6 +3,7 @@ package com.ifba.projeto.tcc.Infra.api.impl;
 import com.ifba.projeto.tcc.Infra.api.AiClient;
 import com.ifba.projeto.tcc.application.dto.request.ModeloInteligenciaArtificialRequest;
 import com.ifba.projeto.tcc.application.dto.response.ModeloInteligenciaArtificialResponse;
+import com.ifba.projeto.tcc.domain.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -13,9 +14,9 @@ import org.springframework.web.client.RestTemplate;
 @RequiredArgsConstructor
 public class OllamaAiClient implements AiClient {
     private final RestTemplate restTemplate;
+    
     @Override
     public String gerarResposta(String prompt) {
-
         try {
             ModeloInteligenciaArtificialRequest request =
                     new ModeloInteligenciaArtificialRequest("phi3:medium", prompt, false);
@@ -26,7 +27,7 @@ public class OllamaAiClient implements AiClient {
             return response.response();
         } catch (Exception e) {
             log.error("Erro ao chamar Ollama: {}", e.getMessage(), e);
-            throw new RuntimeException("Falha ao gerar resposta via Ollama", e);
+            throw new BusinessException("Falha ao gerar resposta via Ollama", e);
         }
     }
 }

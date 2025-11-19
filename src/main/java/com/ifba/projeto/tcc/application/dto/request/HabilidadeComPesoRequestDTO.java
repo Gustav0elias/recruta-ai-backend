@@ -1,2 +1,5 @@
-package com.ifba.projeto.tcc.application.dto.request;public record HabilidadeComPesoRequestDTO() {
-}
+package com.ifba.projeto.tcc.application.dto.request;
+
+import java.util.UUID;
+
+public record HabilidadeComPesoRequestDTO(UUID habilidadeUuid, int peso) {}

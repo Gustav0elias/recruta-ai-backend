@@ -1,6 +1,7 @@
 package com.ifba.projeto.tcc.application.usecase.candidato.impl;
 
 import com.ifba.projeto.tcc.application.dto.response.CandidatoResponseDTO;
+import com.ifba.projeto.tcc.application.dto.response.CandidatoRetornoCurriculoResponseDTO;
 import com.ifba.projeto.tcc.application.mapper.CandidatoMapper;
 import com.ifba.projeto.tcc.application.usecase.candidato.ListarCandidatosGeralUseCase;
 import com.ifba.projeto.tcc.application.usecase.candidato.ListarCandidatosUseCase;
@@ -16,6 +17,6 @@ public class ListarCandidatosGeralUseCaseImpl implements ListarCandidatosGeralUs
     private final CandidatoRepository repository;
     private final CandidatoMapper mapper;
     @Override
-    public Page<CandidatoResponseDTO> executar(Pageable pageable) {
-        return repository.findAll(pageable).map(mapper::toDto);    }
+    public Page<CandidatoRetornoCurriculoResponseDTO> executar(Pageable pageable) {
+        return repository.findAll(pageable).map(mapper::toResumeDto);    }
 }

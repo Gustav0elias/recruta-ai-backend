@@ -27,8 +27,8 @@ public class VagaControllerImpl implements VagaController {
     }
 
     @Override
-    public ResponseEntity<Page<VagaResponseDTO>> listarVagas(Long usuarioId, Pageable pageable) {
-        Page<VagaResponseDTO> page = vagaServiceFacede.listarVagas(usuarioId, pageable);
+    public ResponseEntity<Page<VagaResponseDTO>> listarVagas(Pageable pageable) {
+        Page<VagaResponseDTO> page = vagaServiceFacede.listarVagas(pageable);
         return ResponseEntity.ok(page);
     }
 

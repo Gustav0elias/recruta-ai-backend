@@ -3,11 +3,9 @@ package com.ifba.projeto.tcc.application.usecase.vaga.impl;
 import com.ifba.projeto.tcc.application.dto.response.VagaResponseDTO;
 import com.ifba.projeto.tcc.application.mapper.VagaMapper;
 import com.ifba.projeto.tcc.application.usecase.vaga.DetalharVagaUseCase;
-import com.ifba.projeto.tcc.application.usecase.vaga.ListarVagasUseCase;
+import com.ifba.projeto.tcc.domain.exception.ResourceNotFoundException;
 import com.ifba.projeto.tcc.domain.repository.VagaRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -18,6 +16,8 @@ public class DetalharVagaUseCaseImpl implements DetalharVagaUseCase {
 
     @Override
     public VagaResponseDTO executar(long vagaId) {
-        return repository.findById(vagaId).map(mapper::toDto).orElse(null);
+        return repository.findById(vagaId)
+                .map(mapper::toDto)
+                .orElseThrow(() -> new ResourceNotFoundException("Vaga", vagaId));
     }
 }

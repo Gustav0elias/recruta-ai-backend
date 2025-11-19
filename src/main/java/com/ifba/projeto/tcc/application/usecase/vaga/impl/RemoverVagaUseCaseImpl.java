@@ -3,7 +3,7 @@ package com.ifba.projeto.tcc.application.usecase.vaga.impl;
 import com.ifba.projeto.tcc.application.mapper.VagaMapper;
 import com.ifba.projeto.tcc.application.usecase.vaga.RemoverVagaUseCase;
 import com.ifba.projeto.tcc.domain.repository.VagaRepository;
-import jakarta.persistence.EntityNotFoundException;
+import com.ifba.projeto.tcc.domain.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ public class RemoverVagaUseCaseImpl implements RemoverVagaUseCase {
     @Override
     public void executar(Long id) {
         if (!repository.existsById(id)) {
-            throw new EntityNotFoundException("Vaga com ID " + id + " não encontrada para exclusão.");
+            throw new ResourceNotFoundException("Vaga", id);
         }
         repository.deleteById(id);
     }

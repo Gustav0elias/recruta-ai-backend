@@ -1,6 +1,7 @@
 package com.ifba.projeto.tcc.web.api;
 
 import com.ifba.projeto.tcc.application.dto.response.CandidatoResponseDTO;
+import com.ifba.projeto.tcc.application.dto.response.CandidaturaDetalharResponseDTO;
 import com.ifba.projeto.tcc.application.dto.response.CandidaturaResponseDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,4 +17,6 @@ CandidaturaController {
     ResponseEntity<Page<CandidaturaResponseDTO>> listarCandidaturas(@PathVariable Long vagaId, Pageable pageable);
     @GetMapping("/score/{vagaId}")
     ResponseEntity<Page<CandidaturaResponseDTO>> listarCandidaturasPorScore(@PathVariable Long vagaId, Pageable pageable);
+    @GetMapping("/detalhar/{id}")
+    ResponseEntity<CandidaturaDetalharResponseDTO> detalharCandidatura(@PathVariable Long id);
 }

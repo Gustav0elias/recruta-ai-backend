@@ -19,7 +19,7 @@ public class Analise {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private UUID uuid;
-    @Column(name = "descricao", nullable = false)
+    @Column(name = "descricao", nullable = false, columnDefinition = "TEXT")
     private String descricao;
     @Column(name = "data_analise")
     private LocalDateTime dataAnalise;

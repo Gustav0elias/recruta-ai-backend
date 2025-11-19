@@ -11,7 +11,7 @@ import com.ifba.projeto.tcc.domain.entity.Vaga;
 import com.ifba.projeto.tcc.domain.repository.HabilidadeRepository;
 import com.ifba.projeto.tcc.domain.repository.UsuarioRepository;
 import com.ifba.projeto.tcc.domain.repository.VagaRepository;
-import jakarta.persistence.EntityNotFoundException;
+import com.ifba.projeto.tcc.domain.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -23,27 +23,26 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class CriarVagaUseCaseImpl implements CriarVagaUseCase {
+
     private final VagaRepository vagaRepository;
-    private final UsuarioRepository usuarioRepository;
     private final HabilidadeRepository habilidadeRepository;
     private final VagaMapper vagaMapper;
     private final AuthenticatedUserProviderService authenticatedUserProvider;
 
     @Override
     public VagaResponseDTO executar(VagaRequestDTO dto) {
-        Usuario usuario = authenticatedUserProvider.getAuthenticatedUser();
-
-        Set<Habilidade> habilidades = dto.habilidadesUuids().stream()
-                .map(uuid -> habilidadeRepository.findByUuid(uuid)
-                        .orElseThrow(() -> new EntityNotFoundException(
-                                "Habilidade com UUID " + uuid + " não encontrada")))
-                .collect(Collectors.toSet());
+        var usuario = authenticatedUserProvider.getAuthenticatedUser();
 
         Vaga vaga = vagaMapper.toModel(dto);
         vaga.setUuid(UUID.randomUUID());
         vaga.setUsuario(usuario);
-        vaga.setHabilidades(habilidades);
         vaga.setCriadoEm(LocalDateTime.now());
+
+        dto.habilidades().forEach(hp -> {
+            Habilidade habilidade = habilidadeRepository.findByUuid(hp.habilidadeUuid())
+                    .orElseThrow(() -> new ResourceNotFoundException("Habilidade", hp.habilidadeUuid()));
+            vaga.adicionarHabilidade(habilidade, hp.peso());
+        });
 
         Vaga vagaSalva = vagaRepository.save(vaga);
 

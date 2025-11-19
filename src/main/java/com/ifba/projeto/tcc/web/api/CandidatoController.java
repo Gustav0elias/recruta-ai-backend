@@ -2,6 +2,7 @@ package com.ifba.projeto.tcc.web.api;
 
 import com.ifba.projeto.tcc.application.dto.response.CandidatoResponseDTO;
 import com.ifba.projeto.tcc.application.dto.response.CandidatoResumoResponseDTO;
+import com.ifba.projeto.tcc.application.dto.response.CandidatoRetornoCurriculoResponseDTO;
 import com.ifba.projeto.tcc.application.dto.response.CurriculoResponseDTO;
 import com.ifba.projeto.tcc.application.dto.response.VagaResponseDTO;
 import org.springframework.data.domain.Page;
@@ -20,5 +21,7 @@ CandidatoController {
     @GetMapping("/{vagaId}")
     ResponseEntity<Page<CandidatoResponseDTO>> listarCandidatos(@PathVariable Long vagaId, Pageable pageable);
     @GetMapping("/geral")
-    ResponseEntity<Page<CandidatoResponseDTO>> listarCandidatosGeral(Pageable pageable);
+    ResponseEntity<Page<CandidatoRetornoCurriculoResponseDTO>> listarCandidatosGeral(Pageable pageable);
+    @DeleteMapping("/{idCandidato}")
+    ResponseEntity<Void> deletarCandidato ( @PathVariable(value = "idCandidato") Long idCandidato);
 }

@@ -16,8 +16,8 @@ public interface VagaController {
     @PostMapping
     ResponseEntity<VagaResponseDTO> criarVaga(@Valid @RequestBody VagaRequestDTO dto);
 
-    @GetMapping("/{usuarioId}")
-    ResponseEntity<Page<VagaResponseDTO>> listarVagas(@PathVariable Long usuarioId, Pageable pageable);
+    @GetMapping
+    ResponseEntity<Page<VagaResponseDTO>> listarVagas(Pageable pageable);
 
     @GetMapping("/detalhar/{vagaId}")
     ResponseEntity<VagaResponseDTO> detalharVaga(@PathVariable Long vagaId);

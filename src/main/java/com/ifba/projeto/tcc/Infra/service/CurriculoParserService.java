@@ -4,42 +4,39 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ifba.projeto.tcc.Infra.api.AiClient;
 import com.ifba.projeto.tcc.application.dto.response.CurriculoExtraidoResponseDTO;
 import com.ifba.projeto.tcc.application.helper.CurriculoPromptBuilder;
-import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.ifba.projeto.tcc.domain.exception.BusinessException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
+@Slf4j
 @Service
 public class CurriculoParserService {
-    private static final Logger log = LoggerFactory.getLogger(CurriculoParserService.class);
-
-    private final ObjectMapper mapper = new ObjectMapper();
-    private final RestTemplate restTemplate;
-    private final PdfExtractionService pdfExtractionService;
+    private final ObjectMapper objectMapper;
     private final AiClient aiClient;
+
     public CurriculoParserService(
-            RestTemplate restTemplate,
-            PdfExtractionService pdfExtractionService,
+            ObjectMapper objectMapper,
             @Qualifier("openAiClient") AiClient aiClient
     ) {
-        this.restTemplate = restTemplate;
-        this.pdfExtractionService = pdfExtractionService;
+        this.objectMapper = objectMapper;
         this.aiClient = aiClient;
     }
+
     public CurriculoExtraidoResponseDTO extrairInformacoes(String conteudo) {
         try {
             log.info("Extraindo informações do currículo...");
+            log.debug("Conteúdo do currículo: {}", conteudo);
 
             String prompt = CurriculoPromptBuilder.ConstruirPromptCandidato(conteudo);
-            System.out.println(conteudo);
             String resposta = aiClient.gerarResposta(prompt);
-            System.out.println("Ia resposta" + resposta);
-            return mapper.readValue(resposta, CurriculoExtraidoResponseDTO.class);
+            log.debug("Resposta da IA: {}", resposta);
+            
+            return objectMapper.readValue(resposta, CurriculoExtraidoResponseDTO.class);
 
         } catch (Exception e) {
-            throw new RuntimeException("Erro ao extrair informações com Ollama: " + e.getMessage(), e);
+            log.error("Erro ao extrair informações do currículo: {}", e.getMessage(), e);
+            throw new BusinessException("Erro ao extrair informações do currículo", e);
         }
     }
 }

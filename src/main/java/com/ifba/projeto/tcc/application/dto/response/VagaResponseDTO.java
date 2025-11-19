@@ -12,10 +12,12 @@ import java.util.UUID;
 
 
 public record VagaResponseDTO(
+        Long id,
         UUID uuid,
         String titulo,
         String descricao,
         NivelExperiencia nivelExperiencia,
         LocalDateTime criadoEm,
-        Set<HabilidadeResumoResponseDTO> habilidades
+        Set<HabilidadeResumoResponseDTO> habilidades,
+        Integer quantidadeCandidaturas
 ) {}

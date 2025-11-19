@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -23,5 +24,5 @@ public record VagaRequestDTO(
         NivelExperiencia nivelExperiencia,
 
         @NotEmpty(message = "A vaga deve ter pelo menos uma habilidade vinculada")
-        Set<UUID> habilidadesUuids
+        List<HabilidadeComPesoRequestDTO> habilidades
 ) {}

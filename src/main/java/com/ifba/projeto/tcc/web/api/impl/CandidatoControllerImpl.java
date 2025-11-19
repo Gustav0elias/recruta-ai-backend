@@ -3,6 +3,7 @@ package com.ifba.projeto.tcc.web.api.impl;
 import com.ifba.projeto.tcc.application.dto.request.CurriculoRequestDTO;
 import com.ifba.projeto.tcc.application.dto.response.CandidatoResponseDTO;
 import com.ifba.projeto.tcc.application.dto.response.CandidatoResumoResponseDTO;
+import com.ifba.projeto.tcc.application.dto.response.CandidatoRetornoCurriculoResponseDTO;
 import com.ifba.projeto.tcc.application.dto.response.CurriculoResponseDTO;
 import com.ifba.projeto.tcc.application.facede.CandidatoFacede;
 import com.ifba.projeto.tcc.web.api.CandidatoController;
@@ -29,8 +30,15 @@ public class CandidatoControllerImpl implements CandidatoController {
         Page<CandidatoResponseDTO> page = candidatoFacede.listarCandidatos(vagaId, pageable);
         return ResponseEntity.ok(page);
     }
-    public ResponseEntity<Page<CandidatoResponseDTO>> listarCandidatosGeral(Pageable pageable) {
-        Page<CandidatoResponseDTO> page = candidatoFacede.listarCandidatosGeral(pageable);
+    @Override
+    public ResponseEntity<Page<CandidatoRetornoCurriculoResponseDTO>> listarCandidatosGeral(Pageable pageable) {
+        Page<CandidatoRetornoCurriculoResponseDTO> page = candidatoFacede.listarCandidatosGeral(pageable);
         return ResponseEntity.ok(page);
+    }
+
+    @Override
+    public ResponseEntity<Void> deletarCandidato(Long idCurriculo) {
+        candidatoFacede.deletarCandidato(idCurriculo);
+        return ResponseEntity.noContent().build();
     }
 }

@@ -6,33 +6,51 @@ import com.ifba.projeto.tcc.application.mapper.VagaMapper;
 import com.ifba.projeto.tcc.application.usecase.vaga.AdicionarHabilidadesUseCase;
 import com.ifba.projeto.tcc.domain.entity.Habilidade;
 import com.ifba.projeto.tcc.domain.entity.Vaga;
+import com.ifba.projeto.tcc.domain.entity.VagaHabilidade;
 import com.ifba.projeto.tcc.domain.repository.HabilidadeRepository;
 import com.ifba.projeto.tcc.domain.repository.VagaRepository;
-import jakarta.persistence.EntityNotFoundException;
+import com.ifba.projeto.tcc.domain.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
+
 
 @Service
 @RequiredArgsConstructor
 public class AdicionarHabilidadesUseCaseImpl implements AdicionarHabilidadesUseCase {
+
     private final VagaRepository vagaRepository;
     private final HabilidadeRepository habilidadeRepository;
     private final VagaMapper vagaMapper;
+
     @Override
     public VagaResponseDTO executar(Long vagaId, AdicionarHabilidadesRequestDTO dto) {
-        Vaga vaga = vagaRepository.findById(vagaId)
-                .orElseThrow(() -> new EntityNotFoundException("Vaga com ID " + vagaId + " não encontrada"));
+        var vaga = vagaRepository.findById(vagaId)
+                .orElseThrow(() -> new ResourceNotFoundException("Vaga", vagaId));
 
-        Set<Habilidade> novasHabilidades = dto.habilidadesUuids().stream()
-                .map(uuid -> habilidadeRepository.findByUuid(uuid)
-                        .orElseThrow(() -> new EntityNotFoundException("Habilidade com UUID " + uuid + " não encontrada")))
-                .collect(Collectors.toSet());
+        var novasVagaHabilidades = dto.habilidades().stream()
+                .map(req -> {
+                    var habilidade = habilidadeRepository.findByUuid(req.habilidadeUuid())
+                            .orElseThrow(() -> new ResourceNotFoundException("Habilidade", req.habilidadeUuid()));
 
-        vaga.getHabilidades().addAll(novasHabilidades);
+                    boolean jaExiste = vaga.getVagaHabilidades().stream()
+                            .anyMatch(vh -> vh.getHabilidade().equals(habilidade));
+
+                    return jaExiste ? null : VagaHabilidade.builder()
+                            .vaga(vaga)
+                            .habilidade(habilidade)
+                            .peso(req.peso())
+                            .build();
+                })
+                .filter(Objects::nonNull)
+                .toList();
+
+        vaga.getVagaHabilidades().addAll(novasVagaHabilidades);
         vagaRepository.save(vaga);
+
         return vagaMapper.toDto(vaga);
     }
 }

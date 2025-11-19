@@ -68,6 +68,6 @@ public class AtualizarCurriculoCandidatoUseCaseImpl implements AtualizarCurricul
         salvarCurriculoUseCase.executar(curriculo);
         curriculo.getCandidaturas().forEach(c -> atualizarVinculoCurriculoAVagaUseCase.executar(curriculo, c.getVaga().getId()));
 
-        return new CandidatoResumoResponseDTO(candidato.getUuid(),candidato.getNome(), candidato.getEmail(), candidato.getTelefone() );
+        return new CandidatoResumoResponseDTO(candidato.getId(), candidato.getUuid(),candidato.getNome(), candidato.getEmail(), candidato.getTelefone() );
     }
 }

@@ -5,5 +5,5 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 public interface ListarVagasUseCase {
-    Page<VagaResponseDTO> executar(Long usuarioId, Pageable pageable);
+    Page<VagaResponseDTO> executar( Pageable pageable);
 }

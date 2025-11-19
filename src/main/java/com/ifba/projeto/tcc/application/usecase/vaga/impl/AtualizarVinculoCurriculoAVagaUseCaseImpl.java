@@ -6,6 +6,7 @@ import com.ifba.projeto.tcc.application.usecase.Analise.CriarAnaliseUseCase;
 import com.ifba.projeto.tcc.application.usecase.vaga.AtualizarVinculoCurriculoAVagaUseCase;
 import com.ifba.projeto.tcc.application.usecase.vaga.VincularCurriculoAVagaUseCase;
 import com.ifba.projeto.tcc.domain.entity.*;
+import com.ifba.projeto.tcc.domain.exception.ResourceNotFoundException;
 import com.ifba.projeto.tcc.domain.repository.VagaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,7 @@ public class AtualizarVinculoCurriculoAVagaUseCaseImpl implements AtualizarVincu
     public void executar(Curriculo curriculo, Long idVaga) {
         if (idVaga != null) {
             Vaga vaga = vagaRepository.findById(idVaga)
-                    .orElseThrow(() -> new RuntimeException("Vaga não encontrada"));
+                    .orElseThrow(() -> new ResourceNotFoundException("Vaga", idVaga));
 
             ScoreResponseDTO score = definirScoreAiService.calcularScore(curriculo.getCandidato(), vaga);
 

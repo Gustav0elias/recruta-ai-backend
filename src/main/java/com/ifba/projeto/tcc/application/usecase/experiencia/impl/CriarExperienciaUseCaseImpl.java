@@ -22,7 +22,7 @@ public class CriarExperienciaUseCaseImpl implements CriarExperienciaUseCase {
             experiencia.setCargo(experienciaResponseDTO.cargo());
             experiencia.setEmpresa(experienciaResponseDTO.empresa());
             experiencia.setDescricao(experienciaResponseDTO.descricao());
-            experiencia.setDataInicio(LocalDate.parse(experienciaResponseDTO.dataInicio()));
+            experiencia.setDataInicio(Optional.ofNullable(experienciaResponseDTO.dataInicio()).map(LocalDate::parse) .orElse(null));
             experiencia.setDataFim(Optional.ofNullable(experienciaResponseDTO.dataFim()).map(LocalDate::parse) .orElse(null));
             experiencia.setCandidato(candidato);
             return experiencia;

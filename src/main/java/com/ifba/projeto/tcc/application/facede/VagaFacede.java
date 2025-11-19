@@ -23,8 +23,8 @@ public class VagaFacede {
     }
 
 
-    public Page<VagaResponseDTO> listarVagas(Long usuarioId,Pageable pageable) {
-        return listarVagasUseCase.executar(usuarioId,pageable);
+    public Page<VagaResponseDTO> listarVagas(Pageable pageable) {
+        return listarVagasUseCase.executar(pageable);
     }
 
     public VagaResponseDTO detalharVaga(Long vagaId) {

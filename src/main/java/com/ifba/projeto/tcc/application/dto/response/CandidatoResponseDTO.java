@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.UUID;
 
 public record CandidatoResponseDTO(
+        Long id,
         UUID uuid,
         String nome,
         String email,

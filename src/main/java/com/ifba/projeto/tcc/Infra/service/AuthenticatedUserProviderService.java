@@ -1,6 +1,7 @@
 package com.ifba.projeto.tcc.Infra.service;
 
 import com.ifba.projeto.tcc.domain.entity.Usuario;
+import com.ifba.projeto.tcc.domain.exception.UnauthorizedException;
 import com.ifba.projeto.tcc.domain.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -16,7 +17,7 @@ public class AuthenticatedUserProviderService {
         var authentication = SecurityContextHolder.getContext().getAuthentication();
 
         if (authentication == null || authentication.getPrincipal() == null) {
-            throw new IllegalStateException("Usuário não autenticado");
+            throw new UnauthorizedException("Usuário não autenticado");
         }
 
         return (Usuario) authentication.getPrincipal();

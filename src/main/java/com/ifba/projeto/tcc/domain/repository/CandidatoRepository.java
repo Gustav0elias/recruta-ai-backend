@@ -1,8 +1,6 @@
 package com.ifba.projeto.tcc.domain.repository;
 
-import aj.org.objectweb.asm.commons.Remapper;
 import com.ifba.projeto.tcc.domain.entity.Candidato;
-import com.ifba.projeto.tcc.domain.entity.Vaga;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

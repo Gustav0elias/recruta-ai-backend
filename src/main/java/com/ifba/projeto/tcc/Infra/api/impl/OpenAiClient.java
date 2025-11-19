@@ -3,6 +3,7 @@ package com.ifba.projeto.tcc.Infra.api.impl;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ifba.projeto.tcc.Infra.api.AiClient;
+import com.ifba.projeto.tcc.domain.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,7 +21,7 @@ public class OpenAiClient implements AiClient {
     @Value("${openai.api.key}")
     private String apiKey;
     @Value("${openai.api.url}")
-   private  String urlChatGpt ;
+    private String urlChatGpt;
     @Value("${openai.model:gpt-3.5-turbo}")
     private String model;
     private final RestTemplate restTemplate;
@@ -57,7 +58,7 @@ public class OpenAiClient implements AiClient {
 
         } catch (Exception e) {
             log.error("Erro ao chamar API OpenAI: {}", e.getMessage(), e);
-            throw new RuntimeException("Falha ao gerar resposta via OpenAI", e);
+            throw new BusinessException("Falha ao gerar resposta via OpenAI", e);
         }
     }
 }

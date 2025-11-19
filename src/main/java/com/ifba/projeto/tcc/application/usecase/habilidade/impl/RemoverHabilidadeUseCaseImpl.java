@@ -2,7 +2,7 @@ package com.ifba.projeto.tcc.application.usecase.habilidade.impl;
 
 import com.ifba.projeto.tcc.application.usecase.habilidade.RemoverHabilidadeUseCase;
 import com.ifba.projeto.tcc.domain.repository.HabilidadeRepository;
-import jakarta.persistence.EntityNotFoundException;
+import com.ifba.projeto.tcc.domain.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ public class RemoverHabilidadeUseCaseImpl implements RemoverHabilidadeUseCase {
     @Override
     public void removerHabilidade(Long id) {
         if (!repository.existsById(id)) {
-            throw new EntityNotFoundException("Habilidade com ID " + id + " não encontrada para exclusão.");
+            throw new ResourceNotFoundException("Habilidade", id);
         }
         repository.deleteById(id);
     }

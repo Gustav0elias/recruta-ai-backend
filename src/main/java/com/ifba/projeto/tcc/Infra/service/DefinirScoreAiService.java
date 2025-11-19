@@ -2,12 +2,11 @@ package com.ifba.projeto.tcc.Infra.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ifba.projeto.tcc.Infra.api.AiClient;
-import com.ifba.projeto.tcc.application.dto.response.CurriculoExtraidoResponseDTO;
 import com.ifba.projeto.tcc.application.dto.response.ScoreResponseDTO;
 import com.ifba.projeto.tcc.application.helper.ScorePromptBuilder;
 import com.ifba.projeto.tcc.domain.entity.Candidato;
 import com.ifba.projeto.tcc.domain.entity.Vaga;
-import lombok.RequiredArgsConstructor;
+import com.ifba.projeto.tcc.domain.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -31,11 +30,41 @@ public class DefinirScoreAiService {
 
             log.debug("Resposta do GPT para score: {}", resposta);
 
-            return objectMapper.readValue(resposta, ScoreResponseDTO.class);
+            String respostaLimpa = limparRespostaJson(resposta);
+            log.debug("Resposta limpa: {}", respostaLimpa);
+
+            try {
+                return objectMapper.readValue(respostaLimpa, ScoreResponseDTO.class);
+            } catch (Exception jsonException) {
+                log.error("Erro ao fazer parse do JSON. Resposta original: {}", resposta);
+                log.error("Resposta limpa: {}", respostaLimpa);
+                throw jsonException;
+            }
 
         } catch (Exception e) {
             log.error("Erro ao calcular score via GPT: {}", e.getMessage(), e);
-            throw new RuntimeException("Falha ao calcular score do candidato", e);
+            throw new BusinessException("Falha ao calcular score do candidato", e);
         }
+    }
+
+    private String limparRespostaJson(String resposta) {
+        if (resposta == null || resposta.isBlank()) {
+            return resposta;
+        }
+
+        String limpa = resposta.trim();
+
+        limpa = limpa.replaceAll("(?s)```json\\s*", "");
+        limpa = limpa.replaceAll("(?s)```\\s*", "");
+        limpa = limpa.trim();
+
+        int inicioJson = limpa.indexOf('{');
+        int fimJson = limpa.lastIndexOf('}');
+
+        if (inicioJson != -1 && fimJson != -1 && fimJson > inicioJson) {
+            limpa = limpa.substring(inicioJson, fimJson + 1);
+        }
+
+        return limpa.trim();
     }
 }

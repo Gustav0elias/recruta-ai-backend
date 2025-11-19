@@ -1,5 +1,5 @@
-package com.ifba.projeto.tcc.application.usecase.curriculo;
+package com.ifba.projeto.tcc.application.usecase.candidato;
 
-public interface DeletarCurriculoUseCase {
-    void executar(Long idCurriculo);
+public interface DeletarCandidatoUseCase {
+    void executar(Long idCandidato);
 }

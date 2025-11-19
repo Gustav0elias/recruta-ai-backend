@@ -6,7 +6,7 @@ import com.ifba.projeto.tcc.application.mapper.HabilidadeMapper;
 import com.ifba.projeto.tcc.application.usecase.habilidade.EditarHabilidadeUseCase;
 import com.ifba.projeto.tcc.domain.entity.Habilidade;
 import com.ifba.projeto.tcc.domain.repository.HabilidadeRepository;
-import jakarta.persistence.EntityNotFoundException;
+import com.ifba.projeto.tcc.domain.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +21,7 @@ public class EditarHabilidadeUseCaseImpl implements EditarHabilidadeUseCase {
     @Override
     public HabilidadeResponseDTO executar(HabilidadeRequestDTO habilidadeDTO, Long id) {
         Habilidade habilidadeExistente = repository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Habilidade com ID " + id + " não encontrada."));
+                .orElseThrow(() -> new ResourceNotFoundException("Habilidade", id));
 
         habilidadeExistente.setNome(habilidadeDTO.nome());
         habilidadeExistente.setDescricao(habilidadeDTO.descricao());

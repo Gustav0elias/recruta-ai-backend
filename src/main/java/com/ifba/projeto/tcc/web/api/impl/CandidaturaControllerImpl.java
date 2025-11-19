@@ -1,6 +1,7 @@
 package com.ifba.projeto.tcc.web.api.impl;
 
 import com.ifba.projeto.tcc.application.dto.response.CandidatoResponseDTO;
+import com.ifba.projeto.tcc.application.dto.response.CandidaturaDetalharResponseDTO;
 import com.ifba.projeto.tcc.application.dto.response.CandidaturaResponseDTO;
 import com.ifba.projeto.tcc.application.facede.CandidatoFacede;
 import com.ifba.projeto.tcc.application.facede.CandidaturaFacede;
@@ -16,14 +17,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class CandidaturaControllerImpl implements CandidaturaController {
     private final CandidaturaFacede candidaturaFacede;
+    
     @Override
     public ResponseEntity<Page<CandidaturaResponseDTO>> listarCandidaturas(Long vagaId, Pageable pageable) {
         Page<CandidaturaResponseDTO> page = candidaturaFacede.listarCandidatos(vagaId, pageable);
         return ResponseEntity.ok(page);
     }
+    
     @Override
     public ResponseEntity<Page<CandidaturaResponseDTO>> listarCandidaturasPorScore(Long vagaId, Pageable pageable) {
         Page<CandidaturaResponseDTO> page = candidaturaFacede.listarCandidaturasPorScore(vagaId, pageable);
         return ResponseEntity.ok(page);
+    }
+    
+    @Override
+    public ResponseEntity<CandidaturaDetalharResponseDTO> detalharCandidatura(Long id) {
+        CandidaturaDetalharResponseDTO response = candidaturaFacede.detalharCandidatura(id);
+        return ResponseEntity.ok(response);
     }
 }
