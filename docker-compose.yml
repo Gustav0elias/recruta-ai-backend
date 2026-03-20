@@ -29,7 +29,7 @@ services:
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: password
       CURRICULOS_UPLOAD_DIR: /app/curriculos
-      OPENAI_API_KEY: ${OPENAI_API_KEY:-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}
+      OPENAI_API_KEY: ${OPENAI_API_KEY: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}
       HUGGINGFACE_API_KEY: ${HUGGINGFACE_API_KEY:-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}
       JWT_SECRET: ${JWT_SECRET:-umaChaveSuperSecretaDeNoMinimo32Caracteres123456}
     volumes:
