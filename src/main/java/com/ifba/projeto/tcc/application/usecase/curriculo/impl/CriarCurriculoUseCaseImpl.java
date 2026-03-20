@@ -32,7 +32,7 @@ public class CriarCurriculoUseCaseImpl implements CriarCurriculoUseCase {
     private final SalvarCurriculoService SalvarCurriculoService;
     private final CurriculoMapper mapper;
     private final CurriculoParserService parserService;
-    private final PdfExtractionService pdfExtractionService; // <- novo
+    private final PdfExtractionService pdfExtractionService; 
     private final GerenciarCriarCandidatoUseCase gerenciarCandidatoUseCase;
     private final VincularCurriculoAVagaUseCase vincularCurriculoAVagaUseCase;
     private final ExtrairDadosCurriculoUseCase extrairDadosUseCase;

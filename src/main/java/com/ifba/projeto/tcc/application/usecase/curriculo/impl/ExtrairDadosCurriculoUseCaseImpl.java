@@ -3,6 +3,7 @@ package com.ifba.projeto.tcc.application.usecase.curriculo.impl;
 import com.ifba.projeto.tcc.Infra.service.CurriculoParserService;
 import com.ifba.projeto.tcc.Infra.service.PdfExtractionService;
 import com.ifba.projeto.tcc.application.dto.response.CurriculoExtraidoResponseDTO;
+import com.ifba.projeto.tcc.application.helper.LimparTexto;
 import com.ifba.projeto.tcc.application.usecase.curriculo.ExtrairDadosCurriculoUseCase;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,14 +23,9 @@ public class ExtrairDadosCurriculoUseCaseImpl implements ExtrairDadosCurriculoUs
     public CurriculoExtraidoResponseDTO executar(File arquivoPdf) {
         log.info("Extraindo dados do currículo: {}", arquivoPdf.getName());
         String textoExtraido = pdfExtractionService.extractText(arquivoPdf);
-        textoExtraido = limparTexto(textoExtraido);
+        textoExtraido = LimparTexto.executar(textoExtraido);
         log.debug("Texto extraído e limpo: {}", textoExtraido);
         return parserService.extrairInformacoes(textoExtraido);
     }
 
-    private String limparTexto(String texto) {
-        texto = texto.replaceAll("[^\\x20-\\x7E\\n]", " ");
-        texto = texto.replaceAll("\\s+", " ").trim();
-        return texto;
-    }
 }

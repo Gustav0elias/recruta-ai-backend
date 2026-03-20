@@ -10,20 +10,14 @@ public class ScorePromptBuilder {
         String header = ScorePromptHeader.construir();
         String dadosCandidato = CandidatoDataFormatter.formatar(candidato);
         String dadosVaga = VagaDataFormatter.formatar(vaga);
-        String instrucoes = ScoreEvaluationInstructions.construir();
+        String instrucoes = ScoreInstrucoesPrompt.construir();
         String formatoResposta = ScoreResponseFormat.construir();
         
         return String.format("""
             %s
-            
-            ============================================
             DADOS DO CANDIDATO
-            ============================================
             %s
-            
-            ============================================
             DADOS DA VAGA
-            ============================================
             %s
             
             %s

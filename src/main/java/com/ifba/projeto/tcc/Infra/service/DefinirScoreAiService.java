@@ -25,7 +25,14 @@ public class DefinirScoreAiService {
         try {
             log.info("Calculando score do candidato para a vaga...");
 
-            String prompt = ScorePromptBuilder.construirPromptScore(candidato, vaga);
+            String dadosCandidato = com.ifba.projeto.tcc.application.helper.prompt.CandidatoDataFormatter.formatar(candidato);
+            String dadosVaga = com.ifba.projeto.tcc.application.helper.prompt.VagaDataFormatter.formatar(vaga);
+            log.info("DADOS FORMATADOS DO CANDIDATO:\n{}", dadosCandidato);
+            log.info("DADOS FORMATADOS DA VAGA:\n{}", dadosVaga);
+
+            String prompt = com.ifba.projeto.tcc.application.helper.ScorePromptBuilder.construirPromptScore(candidato, vaga);
+            log.info("PROMPT ENVIADO PARA IA:\n{}", prompt);
+
             String resposta = aiClient.gerarResposta(prompt);
 
             log.debug("Resposta do GPT para score: {}", resposta);

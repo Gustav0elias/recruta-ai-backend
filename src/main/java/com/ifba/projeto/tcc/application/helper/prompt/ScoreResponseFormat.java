@@ -14,8 +14,11 @@ public class ScoreResponseFormat {
             **JSON esperado:**
             {
               "score": <número inteiro de 0 a 100>,
-              "analiseEspecifica": "<análise detalhada de MÍNIMO 2500 caracteres comparando o candidato especificamente com os requisitos da vaga. Deve incluir: comparação habilidade por habilidade, análise de experiência, pontos fortes, pontos fracos, correspondência com o nível exigido, e justificativa detalhada do score atribuído>",
-              "analiseGeral": "<análise geral detalhada de MÍNIMO 2500 caracteres sobre o currículo do candidato. Deve incluir: visão geral do perfil profissional, trajetória de carreira, competências técnicas e comportamentais, potencial de crescimento, e avaliação global do candidato>"
+              "analiseEspecifica": "<análise detalhada de MÍNIMO 2500 caracteres comparando o candidato especificamente com os requisitos da vaga.
+               Deve incluir: comparação habilidade por habilidade, análise de experiência, pontos fortes, pontos fracos, correspondência com o nível exigido,
+                e justificativa detalhada do score atribuído>",
+              "analiseGeral": "<análise geral detalhada de MÍNIMO 2500 caracteres sobre o currículo do candidato. Deve incluir: visão geral do perfil profissional,
+               trajetória de carreira, competências técnicas e comportamentais, potencial de crescimento, e avaliação global do candidato>"
             }
             
             As análises devem ter MÍNIMO 2500 caracteres cada uma.

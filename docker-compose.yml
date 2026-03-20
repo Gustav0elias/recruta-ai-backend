@@ -1,0 +1,40 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: projeto-tcc-db
+    environment:
+      POSTGRES_DB: projeto_tcc
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    container_name: projeto-tcc-app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/projeto_tcc
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+      CURRICULOS_UPLOAD_DIR: /app/curriculos
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-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}
+      HUGGINGFACE_API_KEY: ${HUGGINGFACE_API_KEY:-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}
+      JWT_SECRET: ${JWT_SECRET:-umaChaveSuperSecretaDeNoMinimo32Caracteres123456}
+    volumes:
+      - curriculos_data:/app/curriculos
+
+volumes:
+  pg_data:
+  curriculos_data:
