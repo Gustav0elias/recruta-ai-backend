@@ -2,8 +2,10 @@ package com.ifba.projeto.tcc.application.usecase.habilidade.impl;
 
 import com.ifba.projeto.tcc.application.dto.request.HabilidadeRequestDTO;
 import com.ifba.projeto.tcc.application.dto.response.HabilidadeResponseDTO;
+import com.ifba.projeto.tcc.application.helper.HabilidadeNomeNormalizer;
 import com.ifba.projeto.tcc.application.mapper.HabilidadeMapper;
 import com.ifba.projeto.tcc.application.usecase.habilidade.EditarHabilidadeUseCase;
+import com.ifba.projeto.tcc.domain.exception.BusinessException;
 import com.ifba.projeto.tcc.domain.entity.Habilidade;
 import com.ifba.projeto.tcc.domain.repository.HabilidadeRepository;
 import com.ifba.projeto.tcc.domain.exception.ResourceNotFoundException;
@@ -16,6 +18,7 @@ import org.springframework.stereotype.Service;
 public class EditarHabilidadeUseCaseImpl implements EditarHabilidadeUseCase {
 
     private final HabilidadeRepository repository;
+    private final HabilidadeNomeNormalizer habilidadeNomeNormalizer;
     private final HabilidadeMapper mapper = HabilidadeMapper.INSTANCE;
 
     @Override
@@ -23,7 +26,16 @@ public class EditarHabilidadeUseCaseImpl implements EditarHabilidadeUseCase {
         Habilidade habilidadeExistente = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Habilidade", id));
 
-        habilidadeExistente.setNome(habilidadeDTO.nome());
+        String nomeNormalizado = habilidadeNomeNormalizer.canonicalizar(habilidadeDTO.nome());
+        repository.findAll().stream()
+                .filter(h -> !h.getId().equals(id))
+                .filter(h -> habilidadeNomeNormalizer.saoEquivalentes(h.getNome(), nomeNormalizado))
+                .findFirst()
+                .ifPresent(h -> {
+                    throw new BusinessException("Ja existe uma habilidade cadastrada com este nome.");
+                });
+
+        habilidadeExistente.setNome(nomeNormalizado);
         habilidadeExistente.setDescricao(habilidadeDTO.descricao());
         habilidadeExistente.setTipo(habilidadeDTO.tipo());
 

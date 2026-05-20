@@ -29,12 +29,37 @@ services:
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: password
       CURRICULOS_UPLOAD_DIR: /app/curriculos
-      OPENAI_API_KEY: ${OPENAI_API_KEY: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}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-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}
       HUGGINGFACE_API_KEY: ${HUGGINGFACE_API_KEY:-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}
       JWT_SECRET: ${JWT_SECRET:-umaChaveSuperSecretaDeNoMinimo32Caracteres123456}
     volumes:
       - curriculos_data:/app/curriculos
 
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: projeto-tcc-prometheus
+    depends_on:
+      - app
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: projeto-tcc-grafana
+    depends_on:
+      - prometheus
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+
 volumes:
   pg_data:
   curriculos_data:
+  grafana_data:
