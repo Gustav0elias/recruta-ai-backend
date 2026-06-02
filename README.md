@@ -27,17 +27,24 @@ git clone <url-do-repositorio>
 cd projeto-tcc
 ```
 
-2. Suba o sistema:
+2. Configure as variáveis de ambiente:
+```bash
+cp .env.example .env
+```
+
+Edite o arquivo `.env` e preencha `OPENAI_API_KEY` com a sua chave da OpenAI.
+
+3. Suba o sistema:
 ```bash
 docker compose up --build
 ```
 
-3. Aguarde até aparecer no log:
+4. Aguarde até aparecer no log:
 ```
 Started ProjetoTccApplication in X seconds
 ```
 
-4. Acesse:
+5. Acesse:
    - **API:** http://localhost:8080
    - **Swagger (documentação interativa):** http://localhost:8080/swagger-ui.html
 
@@ -56,7 +63,7 @@ docker compose down -v
 
 - O banco PostgreSQL é criado automaticamente pelo Docker.
 - As tabelas são criadas/atualizadas automaticamente pelo Hibernate.
-- A chave da API OpenAI já está configurada no `docker-compose.yml`.
+- A chave da API OpenAI deve ficar no arquivo `.env`, que não é versionado.
 
 ---
 
