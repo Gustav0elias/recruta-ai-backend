@@ -1,0 +1,260 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 4 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R /F4 8 0 R >> >> /Contents 9 0 R >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R /F4 8 0 R >> >> /Contents 10 0 R >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+8 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+9 0 obj
+<< /Length 9120 >>
+stream
+q 0.970 0.920 0.900 rg 0.0 778.0 595.0 64.0 re f Q
+BT 0.650 0.140 0.100 rg /F2 20.0 Tf 1 0 0 1 42.0 808.0 Tm 
+(Rafael Souza Brito) Tj ET
+BT 0.200 0.200 0.200 rg /F1 10.0 Tf 1 0 0 1 42.0 788.0 Tm 
+(Desenvolvedor Backend Java Júnior) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.2 Tf 1 0 0 1 330.0 808.0 Tm 
+(rafael.souza.brito3@gmail.com) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.2 Tf 1 0 0 1 330.0 795.0 Tm 
+(\(77\) 99821-3302 | Vitória da Conquista - BA) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.2 Tf 1 0 0 1 330.0 782.0 Tm 
+(linkedin.com/in/rafael-souza-brito) Tj ET
+BT 0.450 0.450 0.450 rg /F1 7.5 Tf 1 0 0 1 512.0 28.0 Tm 
+(p. 1) Tj ET
+q 0.970 0.920 0.900 rg 42.0 738.0 210.0 17.0 re f Q
+BT 0.650 0.140 0.100 rg /F2 8.8 Tf 1 0 0 1 48.0 742.0 Tm 
+(RESUMO PROFISSIONAL) Tj ET
+BT 0.000 0.000 0.000 rg /F1 9.0 Tf 1 0 0 1 42.0 722.0 Tm 
+(Desenvolvedor com vivência em aplicações web, rotinas de manutenção, análise de logs e entrega incremental em times) Tj ET
+BT 0.000 0.000 0.000 rg /F1 9.0 Tf 1 0 0 1 42.0 710.0 Tm 
+(ágeis. Busca oportunidade para consolidar carreira em backend Java, contribuindo com boas práticas de) Tj ET
+BT 0.000 0.000 0.000 rg /F1 9.0 Tf 1 0 0 1 42.0 698.0 Tm 
+(versionamento, testes, observabilidade e melhoria contínua.) Tj ET
+q 0.970 0.920 0.900 rg 42.0 674.0 210.0 17.0 re f Q
+BT 0.650 0.140 0.100 rg /F2 8.8 Tf 1 0 0 1 48.0 678.0 Tm 
+(COMPETÊNCIAS TÉCNICAS E COMPORTAMENTAIS) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 658.0 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 658.0 Tm 
+(PostgreSQL; Hibernate/JPA; Mockito; Maven) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 644.5 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 644.5 Tm 
+(Docker; JUnit 5; Clean Code; CI/CD) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 631.0 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 631.0 Tm 
+(Spring Boot; APIs REST; Java 17; RabbitMQ) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 617.5 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 617.5 Tm 
+(Microsserviços; SQL; Swagger/OpenAPI; Git) Tj ET
+q 0.970 0.920 0.900 rg 42.0 592.0 210.0 17.0 re f Q
+BT 0.650 0.140 0.100 rg /F2 8.8 Tf 1 0 0 1 48.0 596.0 Tm 
+(EXPERIÊNCIA PROFISSIONAL) Tj ET
+BT 0.000 0.000 0.000 rg /F2 9.7 Tf 1 0 0 1 42.0 576.0 Tm 
+(Analista Desenvolvedor Júnior) Tj ET
+BT 0.250 0.250 0.250 rg /F1 8.2 Tf 1 0 0 1 272.0 576.0 Tm 
+(mar/2024 - atual) Tj ET
+BT 0.200 0.200 0.200 rg /F2 8.6 Tf 1 0 0 1 42.0 564.0 Tm 
+(PagBank) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 551.0 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 551.0 Tm 
+(Desenvolveu e manteve endpoints REST para cadastro, consulta, atualização e integração de dados entre módulos internos.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 537.6 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 537.6 Tm 
+(Criou testes unitários com JUnit e Mockito para regras de negócio, validadores e serviços de persistência.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 524.2 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 524.2 Tm 
+(Ajustou consultas SQL e mapeamentos JPA/Hibernate para reduzir duplicidade de dados e melhorar tempo de resposta em) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 512.8 Tm 
+(relatórios.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 499.4 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 499.4 Tm 
+(Documentou contratos no Swagger/OpenAPI e manteve coleções no Postman para apoiar QA e homologação.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 486.0 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 486.0 Tm 
+(Participou de cerimônias Scrum, revisão de código via pull request e análise de incidentes em ambiente de homologação.) Tj ET
+BT 0.000 0.000 0.000 rg /F2 9.7 Tf 1 0 0 1 42.0 467.6 Tm 
+(Assistente de Desenvolvimento) Tj ET
+BT 0.250 0.250 0.250 rg /F1 8.2 Tf 1 0 0 1 272.0 467.6 Tm 
+(fev/2022 - dez/2023) Tj ET
+BT 0.200 0.200 0.200 rg /F2 8.6 Tf 1 0 0 1 42.0 455.6 Tm 
+(TOTVS) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 442.6 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 442.6 Tm 
+(Apoiou a migração de rotinas legadas para serviços web, criando DTOs, validações e tratamento de exceções.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 429.2 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 429.2 Tm 
+(Realizou manutenção em telas administrativas, scripts SQL e integrações com sistemas de autenticação.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 415.8 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 415.8 Tm 
+(Criou documentação técnica simples para fluxos de cadastro, permissões, erros comuns e dependências entre serviços.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 402.4 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 402.4 Tm 
+(Acompanhou deploys com Docker Compose e conferiu variáveis de ambiente, logs e health checks.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 389.0 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 389.0 Tm 
+(Trabalhou próximo ao suporte para reproduzir bugs reportados por usuários e propor correções de baixo risco.) Tj ET
+BT 0.000 0.000 0.000 rg /F2 9.7 Tf 1 0 0 1 42.0 370.6 Tm 
+(Auxiliar de TI) Tj ET
+BT 0.250 0.250 0.250 rg /F1 8.2 Tf 1 0 0 1 272.0 370.6 Tm 
+(jan/2021 - jun/2022) Tj ET
+BT 0.200 0.200 0.200 rg /F2 8.6 Tf 1 0 0 1 42.0 358.6 Tm 
+(B3) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 345.6 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 345.6 Tm 
+(Atendeu chamados relacionados a sistemas internos, acesso de usuários, inconsistências cadastrais e relatórios.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 332.2 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 332.2 Tm 
+(Elaborou consultas SQL para conferência de informações e apoio a demandas de áreas administrativas.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 318.8 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 318.8 Tm 
+(Organizou planilhas de controle, documentação de procedimentos e histórico de problemas recorrentes.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 305.4 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 305.4 Tm 
+(Participou de pequenas automações para reduzir retrabalho em conferências manuais.) Tj ET
+q 0.970 0.920 0.900 rg 42.0 283.0 210.0 17.0 re f Q
+BT 0.650 0.140 0.100 rg /F2 8.8 Tf 1 0 0 1 48.0 287.0 Tm 
+(PROJETOS E ENTREGAS RELEVANTES) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 267.0 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 267.0 Tm 
+(API de controle financeiro pessoal com autenticação JWT, PostgreSQL, Docker Compose, testes unitários e documentação) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 255.5 Tm 
+(Swagger.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 242.0 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 242.0 Tm 
+(Sistema de agendamento para clínica local com cadastro de pacientes, histórico de consultas e painel administrativo.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 228.5 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 228.5 Tm 
+(Serviço REST para controle de estoque com regras de entrada/saída, filtros paginados e validação de permissões.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 215.0 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 215.0 Tm 
+(Dashboard técnico para acompanhar tempo médio de resposta, quantidade de erros e endpoints mais acessados.) Tj ET
+q 0.970 0.920 0.900 rg 42.0 189.5 210.0 17.0 re f Q
+BT 0.650 0.140 0.100 rg /F2 8.8 Tf 1 0 0 1 48.0 193.5 Tm 
+(FORMAÇÃO ACADÊMICA) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.6 Tf 1 0 0 1 42.0 173.5 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.6 Tf 1 0 0 1 53.0 173.5 Tm 
+(Bacharelado em Sistemas de Informação - Universidade Salvador \(UNIFACS\), cursando 7º semestre.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.6 Tf 1 0 0 1 42.0 159.9 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.6 Tf 1 0 0 1 53.0 159.9 Tm 
+(Curso técnico integrado em Desenvolvimento de Sistemas - IFBA, concluído em 2022.) Tj ET
+q 0.970 0.920 0.900 rg 42.0 134.3 210.0 17.0 re f Q
+BT 0.650 0.140 0.100 rg /F2 8.8 Tf 1 0 0 1 48.0 138.3 Tm 
+(CURSOS E CERTIFICAÇÕES) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 118.3 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 118.3 Tm 
+(Spring Boot Expert: JPA, Segurança, REST e Testes - AlgaWorks.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 104.8 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 104.8 Tm 
+(Formação Java e Orientação a Objetos - Alura.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 91.3 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 91.3 Tm 
+(Docker para Desenvolvedores - Digital Innovation One.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 77.8 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 77.8 Tm 
+(Git e GitHub: controle e colaboração em projetos - Microsoft Learn.) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Length 1736 >>
+stream
+q 0.970 0.920 0.900 rg 0.0 778.0 595.0 64.0 re f Q
+BT 0.650 0.140 0.100 rg /F2 10.0 Tf 1 0 0 1 42.0 806.0 Tm 
+(Rafael Souza Brito) Tj ET
+BT 0.450 0.450 0.450 rg /F1 7.5 Tf 1 0 0 1 512.0 28.0 Tm 
+(p. 2) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 742.0 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 742.0 Tm 
+(SQL para análise e modelagem de dados - Fundação Bradesco.) Tj ET
+q 0.970 0.920 0.900 rg 42.0 716.5 210.0 17.0 re f Q
+BT 0.650 0.140 0.100 rg /F2 8.8 Tf 1 0 0 1 48.0 720.5 Tm 
+(IDIOMAS) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 700.5 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 700.5 Tm 
+(Inglês técnico para leitura de documentação.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 42.0 687.0 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.5 Tf 1 0 0 1 53.0 687.0 Tm 
+(Espanhol básico.) Tj ET
+q 0.970 0.920 0.900 rg 42.0 661.5 210.0 17.0 re f Q
+BT 0.650 0.140 0.100 rg /F2 8.8 Tf 1 0 0 1 48.0 665.5 Tm 
+(INFORMAÇÕES COMPLEMENTARES) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 645.5 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 645.5 Tm 
+(Disponibilidade para trabalho híbrido ou remoto, com preferência por times que utilizem ritos ágeis.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 632.1 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 632.1 Tm 
+(Experiência com abertura e acompanhamento de pull requests, revisão de código e registro de decisões técnicas.) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 42.0 618.7 Tm 
+(-) Tj ET
+BT 0.000 0.000 0.000 rg /F1 8.4 Tf 1 0 0 1 53.0 618.7 Tm 
+(Portfólio com projetos acadêmicos e pessoais em GitHub, usando README, exemplos de requisição e instruções de execução.) Tj ET
+endstream
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000283 00000 n 
+0000000440 00000 n 
+0000000537 00000 n 
+0000000639 00000 n 
+0000000734 00000 n 
+0000000833 00000 n 
+0000010004 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+11792
+%%EOF

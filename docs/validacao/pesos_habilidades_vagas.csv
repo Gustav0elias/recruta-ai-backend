@@ -1,0 +1,14 @@
+﻿vaga_id,vaga_titulo,habilidade,peso,observacao
+14,Desenvolvedor Backend Java Junior,Java,5,Habilidade central da vaga
+14,Desenvolvedor Backend Java Junior,Spring Boot,5,Habilidade central da vaga
+14,Desenvolvedor Backend Java Junior,APIs REST,5,Habilidade central da vaga
+14,Desenvolvedor Backend Java Junior,Bancos de dados relacionais,4,Requisito importante descrito na vaga
+14,Desenvolvedor Backend Java Junior,Docker,3,Conhecimento desejavel
+14,Desenvolvedor Backend Java Junior,Testes automatizados,3,Conhecimento desejavel
+14,Desenvolvedor Backend Java Junior,Git,3,Conhecimento desejavel
+15,Analista de Suporte,Atendimento ao usuario,5,Habilidade central da vaga
+15,Analista de Suporte,Windows,5,Habilidade central da vaga
+15,Analista de Suporte,Active Directory,4,Requisito importante descrito na vaga
+15,Analista de Suporte,Redes,4,Requisito importante descrito na vaga
+15,Analista de Suporte,ITIL,3,Conhecimento desejavel
+15,Analista de Suporte,Ferramentas de gestao de chamados,4,Conhecimento desejavel

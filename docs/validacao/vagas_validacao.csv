@@ -1,0 +1,3 @@
+﻿id,criado_em,titulo,nivel,uuid,id_empresa,descricao
+14,2026-03-12 22:18:06.41893,Desenvolvedor Backend Java Junior,JUNIOR,bb85dd31-279e-4abb-adbf-055756c0e2f4,7,"Vaga para desenvolvedor backend Java junior com experiencia em Spring Boot, APIs REST e bancos de dados relacionais. Desejavel conhecimento em Docker, testes automatizados e versionamento com Git."
+15,2026-03-12 22:18:06.41893,Analista de Suporte,JUNIOR,cc199d03-6fe9-43df-a1a0-e3fa5b23af47,7,"Vaga para analista de suporte tecnico com experiencia em atendimento ao usuario, Windows, Active Directory e redes. Desejavel conhecimento em ITIL e ferramentas de gestao de chamados."
