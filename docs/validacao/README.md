@@ -37,7 +37,3 @@ As faixas utilizadas foram:
 - 70 a 89: candidato atende bem, mas possui pequenas lacunas.
 - 40 a 69: candidato com aderência parcial e deficiências relevantes.
 - 0 a 39: candidato muito abaixo do perfil da vaga.
-
-## Texto sugerido para o TCC
-
-A validação do sistema foi realizada com duas vagas fictícias para fins de teste: Desenvolvedor Backend Java Junior e Analista de Suporte. Foram utilizados 42 currículos fictícios, gerados com apoio do ChatGPT e distribuídos entre as vagas. Para cada vaga foram definidos pesos distintos para habilidades técnicas, permitindo observar como o sistema se comportava diante de descrições mais objetivas ou mais amplas. Os currículos utilizados, os perfis das vagas, os pesos atribuídos às habilidades e os resultados obtidos foram organizados em planilhas disponibilizadas no repositório do projeto.
