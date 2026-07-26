@@ -1,4 +1,4 @@
-# Prompt reconstruído para geração dos currículos sintéticos
+# Prompt geração dos currículos sintéticos
 
 ```text
 Você atuará como pesquisador de dados sintéticos, recrutador técnico, redator de currículos e desenvolvedor Python especializado em geração de PDFs.
