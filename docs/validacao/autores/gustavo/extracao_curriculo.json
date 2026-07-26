@@ -1,0 +1,117 @@
+{
+  "nome": "Gustavo Elias da Silva Alves",
+  "email": "gustav03elias@gmail.com",
+  "telefone": "77988718957",
+  "habilidades": [
+    {
+      "nome": "Java",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Spring Boot",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Spring Security",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "APIs REST",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "JPA/Hibernate",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Arquitetura Hexagonal",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "JUnit",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Maven",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "RabbitMQ",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Flyway",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "PostgreSQL",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "MySQL",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Git",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Docker",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Angular",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "TypeScript",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Flutter",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Python Flask",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "PHP Laravel",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Scrum",
+      "tipo": "HABILIDADE_TECNICA"
+    }
+  ],
+  "experiencias": [
+    {
+      "empresa": "Quality Telecomunicações",
+      "cargo": "Desenvolvedor Java Backend",
+      "descricao": "Java e Spring Boot em módulo fiscal, arquitetura hexagonal, segurança, Flyway e testes JUnit.",
+      "dataInicio": "2024-06-01",
+      "dataFim": null
+    },
+    {
+      "empresa": "Cegonha Soluções",
+      "cargo": "Desenvolvedor Full Stack",
+      "descricao": "APIs Spring Boot, RabbitMQ, PostgreSQL, Flyway, JUnit, Git e aplicativo Flutter com BLoC.",
+      "dataInicio": "2023-10-01",
+      "dataFim": "2025-02-01"
+    },
+    {
+      "empresa": "Secretaria Municipal de Saúde",
+      "cargo": "Desenvolvedor Full Stack",
+      "descricao": "APIs Spring Boot e sistemas web com Python Flask, PHP, HTML, CSS e JavaScript.",
+      "dataInicio": "2023-01-01",
+      "dataFim": "2023-10-01"
+    },
+    {
+      "empresa": "DV Solutions",
+      "cargo": "Técnico de Suporte em TI",
+      "descricao": "Manutenção de computadores, configuração e monitoramento de redes e digitalização.",
+      "dataInicio": "2022-02-01",
+      "dataFim": "2022-12-01"
+    }
+  ]
+}

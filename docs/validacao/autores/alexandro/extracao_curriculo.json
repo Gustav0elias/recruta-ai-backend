@@ -1,0 +1,137 @@
+{
+  "nome": "Alexandro dos Santos Silva",
+  "email": "alexandrossilva@gmail.com",
+  "telefone": "",
+  "habilidades": [
+    {
+      "nome": "Java",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "JavaScript",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "TypeScript",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "SQL",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Spring Boot",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "APIs REST",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Microsserviços",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Arquitetura em Camadas",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Orientação a Objetos",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Angular",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "HTML5",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "CSS3",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "MySQL",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "MongoDB",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Modelagem Relacional",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Docker",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Git",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Linux",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "SOLID",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "UML",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Design Patterns",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Arquitetura de Software",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Engenharia de Requisitos",
+      "tipo": "HABILIDADE_TECNICA"
+    },
+    {
+      "nome": "Liderança Técnica",
+      "tipo": "SOFT_SKILL"
+    },
+    {
+      "nome": "Mentoria",
+      "tipo": "SOFT_SKILL"
+    }
+  ],
+  "experiencias": [
+    {
+      "empresa": "Instituto Federal da Bahia",
+      "cargo": "Senior Software Engineer",
+      "descricao": "Desenvolvimento web e de APIs, arquitetura, integração, liderança técnica e mentoria.",
+      "dataInicio": "2008-01-01",
+      "dataFim": null
+    },
+    {
+      "empresa": "Fundação de Apoio da UESB",
+      "cargo": "Software Developer",
+      "descricao": "Desenvolvimento de sistemas administrativos, banco de dados e evolução de software corporativo.",
+      "dataInicio": "2002-01-01",
+      "dataFim": "2003-01-01"
+    },
+    {
+      "empresa": "Civis Tecnologia",
+      "cargo": "Software Developer",
+      "descricao": "Desenvolvimento de aplicações comerciais.",
+      "dataInicio": "2003-01-01",
+      "dataFim": "2003-12-01"
+    },
+    {
+      "empresa": "Universidade Estadual do Sudoeste da Bahia",
+      "cargo": "Software Developer",
+      "descricao": "Full stack, modelagem de banco e evolução de sistema web para integração de órgãos públicos.",
+      "dataInicio": "2005-01-01",
+      "dataFim": "2006-12-01"
+    }
+  ]
+}

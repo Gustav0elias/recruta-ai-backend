@@ -1,0 +1,71 @@
+{
+  "titulo": "Desenvolvedor Full Stack Sênior — Java e Angular",
+  "descricao": "Atuar na arquitetura, desenvolvimento e evolução de plataformas web, liderando soluções full stack com Java, Spring Boot, APIs REST, TypeScript e Angular. A função envolve microsserviços, bancos SQL, Docker, Git, padrões de projeto, integração de sistemas, revisão técnica e mentoria da equipe.",
+  "nivelExperiencia": "SENIOR",
+  "habilidades": [
+    {
+      "nome": "Arquitetura de Software",
+      "peso": 10
+    },
+    {
+      "nome": "Java",
+      "peso": 10
+    },
+    {
+      "nome": "Spring Boot",
+      "peso": 9
+    },
+    {
+      "nome": "APIs REST",
+      "peso": 9
+    },
+    {
+      "nome": "TypeScript",
+      "peso": 8
+    },
+    {
+      "nome": "Angular",
+      "peso": 8
+    },
+    {
+      "nome": "Microsserviços",
+      "peso": 8
+    },
+    {
+      "nome": "Liderança técnica",
+      "peso": 8
+    },
+    {
+      "nome": "SQL e bancos relacionais",
+      "peso": 7
+    },
+    {
+      "nome": "Integração de sistemas",
+      "peso": 7
+    },
+    {
+      "nome": "Design Patterns",
+      "peso": 7
+    },
+    {
+      "nome": "SOLID",
+      "peso": 7
+    },
+    {
+      "nome": "Docker",
+      "peso": 6
+    },
+    {
+      "nome": "Git",
+      "peso": 6
+    },
+    {
+      "nome": "HTML5 e CSS3",
+      "peso": 5
+    },
+    {
+      "nome": "Testes automatizados",
+      "peso": 4
+    }
+  ]
+}

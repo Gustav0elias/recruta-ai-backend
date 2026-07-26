@@ -1,0 +1,55 @@
+{
+  "titulo": "Desenvolvedor Backend Java Pleno",
+  "descricao": "Atuar no desenvolvimento, manutenção e evolução de APIs REST e serviços corporativos em Java e Spring Boot, aplicando arquitetura hexagonal, Spring Security, JPA/Hibernate, bancos relacionais e testes com JUnit. Espera-se autonomia em Git e integração de soluções com Docker, RabbitMQ e Flyway.",
+  "nivelExperiencia": "PLENO",
+  "habilidades": [
+    {
+      "nome": "Java",
+      "peso": 10
+    },
+    {
+      "nome": "Spring Boot",
+      "peso": 10
+    },
+    {
+      "nome": "APIs REST",
+      "peso": 9
+    },
+    {
+      "nome": "Arquitetura Hexagonal",
+      "peso": 8
+    },
+    {
+      "nome": "Bancos de dados relacionais",
+      "peso": 8
+    },
+    {
+      "nome": "JPA/Hibernate",
+      "peso": 8
+    },
+    {
+      "nome": "Spring Security",
+      "peso": 7
+    },
+    {
+      "nome": "Testes automatizados com JUnit",
+      "peso": 7
+    },
+    {
+      "nome": "Git",
+      "peso": 6
+    },
+    {
+      "nome": "Docker",
+      "peso": 5
+    },
+    {
+      "nome": "RabbitMQ",
+      "peso": 4
+    },
+    {
+      "nome": "Flyway",
+      "peso": 4
+    }
+  ]
+}
